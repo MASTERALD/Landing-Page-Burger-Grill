@@ -1,0 +1,730 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #40BF06;
+    --accent-color: #FDCA40;
+    --background-color: #ffffff;
+    --text-color: #1A1A1A;
+    --light-text: #FFFFFF;
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}  
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: black;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FDCA40;
+    transform: translateY(-2px);
+}
+
+.btn-order {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: black;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-large {
+    font-size: 1.2rem;
+    padding: 16px 32px;
+}
+
+.btn-small {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+}
+
+/* Header Styles */
+header {
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo-text {
+    color: var(--light-text);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 20%;
+    gap: 8%;
+}
+
+.nav-link {
+    color: var(--light-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.fa-shopping-cart {
+    font-size: 23px;
+}
+
+
+/* Hero Section */
+.hero {
+    background : rgb(0, 0, 0);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 5%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.hero {
+    position: relative;
+}
+
+.scroll-down-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Tamaño del círculo */
+    height: 50px; /* Tamaño del círculo */
+    background-color: white; /* Fondo blanco */
+    border-radius: 50%; /* Hacerlo redondo */
+    color: black; /* Icono de color negro */
+    font-size: 24px; /* Tamaño del icono */
+    cursor: pointer;
+    position: absolute;
+    bottom: 40px; /* Más abajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontalmente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    animation: bounce 2s infinite; /* Animación de rebote */
+}
+
+.scroll-down-icon i {
+    font-size: 24px;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .scroll-down-icon {
+        display: none; /* Ocultar el elemento en dispositivos móviles */
+    }
+}
+
+
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(10px);
+    }
+    60% {
+        transform: translateY(5px);
+    }
+}
+
+
+
+.text-container {
+    flex: 1;
+}
+
+.main-text {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--light-text);
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--light-text);
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+    border-radius: var(--border-radius);
+    transition: transform 0.5s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* Featured Burgers Section */
+.featured-burgers {
+    padding: 10rem 5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: black;
+}
+
+.burger-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.burger-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.burger-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.burger-img {
+    width: 250px;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.burger-img-2 {
+    width: 200px;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.burger-img-3 {
+    width: 260px;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+
+.burger-img-4 {
+    width: 265px;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+
+
+.burger-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.burger-card p {
+    margin-bottom: 1rem;
+}
+
+.price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+/* Features Section */
+.features {
+    background-color: white;
+    padding: 12%;
+}
+
+.features .section-title {
+    color: black;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: black;
+    border-radius: var(--border-radius);
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.featured-Offerts {
+    background-color: #000000;
+    padding: 4.5rem;
+    margin-bottom: 20px;
+}
+
+.title-offert {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+/* CTA Section */
+.cta {
+    text-align: center;
+    padding: 5rem 5%;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-color);
+    color: var(--light-text);
+    padding: 6% 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: -80px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: var(--accent-color);
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-weight: 700;
+    padding-top: 1rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 65px;
+  }
+
+
+  .main-text {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .burger-cards {
+    justify-content: space-around;
+  }
+
+  .burger-card {
+    width: calc(50% - 1rem);
+    margin-bottom: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 3%;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+        margin-right: 0;
+        gap: 5%;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+   
+   
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 2rem 3%;
+    }
+
+    .hero-image {
+        max-width: 85%;
+        margin-top: -80px;
+        align-items: center;
+    }
+
+    .main-text {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+  
+    .featured-burgers,
+    .featured-Offerts,
+    .features {
+        padding: 5rem 3%;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .burger-card {
+        width: 100%;
+    }
+
+    .footer-section {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    .btn-large {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .main-text {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .cta h2 {
+        font-size: 2rem;
+    }
+
+    .cta p {
+        font-size: 1rem;
+    }
+
+    .burger-card {
+        width: 100%;
+    }
+
+    .burger-img,
+    .burger-img-2,
+    .burger-img-3,
+    .burger-img-4 {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .feature-item {
+        padding: 1.5rem;
+    }
+
+    .feature-item i {
+        font-size: 2.5rem;
+    }
+
+    .feature-item h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero, .featured-burgers, .features, .testimonials, .cta {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.text-container {
+    animation: slideInLeft 1s ease-in-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hero-image {
+    animation: slideInRight 1s ease-in-out;
+}
+
+/* Accessibility improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus styles for better keyboard navigation */
+a:focus, button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    header, footer, .cta {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    .hero, .featured-burgers, .features, .testimonials {
+        page-break-inside: avoid;
+    }
+}
+
+/* Improve accessibility for mobile devices */
+@media (hover: none) {
+  .btn:hover,
+  .burger-card:hover,
+  .feature-item:hover,
+  .social-icons a:hover {
+    transform: none;
+  }
+}
+/* Estilo del menú para pantallas grandes (PC) */
+.nav-menu {
+    display: flex; /* Usamos flex para la disposición en PC */
+    flex-direction: row; /* Menú horizontal en pantallas grandes */
+    background-color: black;
+    position: relative; /* Menú visible de manera predeterminada */
+    top: 0;
+    right: 0; /* Alineación del menú al borde derecho */
+    width: auto; /* El menú no ocupa todo el ancho en PC */
+    height: auto; /* El menú no tiene altura fija en PC */
+    z-index: 1000;
+    align-items: center;
+}
+
+/* Estilo del menú para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: flex; /* Usamos flex para animar el menú en pantallas pequeñas */
+        flex-direction: column;
+        background-color: black;
+        position: fixed;
+        top: 100px;
+        right: -100%; /* Oculto fuera de la pantalla */
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        align-items: center;
+        transition: right 0.3s ease-in-out; /* Transición suave */
+    }
+
+    /* Mostrar el menú con animación */
+    .nav-menu.nav-menu-active {
+        right: 0; /* Desliza el menú desde la derecha */
+    }
+
+    /* Estilo del ícono del menú */
+    .mobile-menu-icon {
+        display: block; /* Mostrar el ícono solo en pantallas pequeñas */
+        font-size: 1.8rem;
+        color: #ffffff;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 1001; /* Por encima del resto */
+    }
+
+    /* Estilo de los enlaces del menú en móviles */
+    .nav-item {
+        margin: -5px 0;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: none;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Animación suave */
+    }
+
+    /* Animar los enlaces cuando el menú está activo */
+    .nav-menu.nav-menu-active .nav-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
